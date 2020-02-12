@@ -2,7 +2,7 @@
 title: "SDS 192 Assignment"
 subtitle: "SDS 192"
 author: "Your name"
-date: "`r Sys.Date()`"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
 output: 
   html_document:
     toc: true
@@ -15,14 +15,19 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  echo = TRUE
+)
 library(tidyverse)
 library(sds192)
 ```
 
 ## Section 1
 
-
-
+```{r}
+mtcars
+```
 
 
 
@@ -31,7 +36,7 @@ library(sds192)
 
 ## Word count
 
-```{r, message=FALSE, echo=FALSE}
+```{r word_count, message=FALSE, echo=FALSE}
 sds192::text_stats()
 ```
 
