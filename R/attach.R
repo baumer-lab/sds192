@@ -4,6 +4,12 @@
 
 .onAttach <- function(libname, pkgname) {
   
+  if (!"wordcountaddin" %in% rownames(utils::installed.packages())) {
+    suppressMessages(
+      remotes::install_github("benmarwick/wordcountaddin", dependencies = TRUE)
+    )
+  }
+  
   fertile_group <- c(
     "a534f2dfa754d5638a09fec07c6d6964", "989299a7f94a18b5700561c69f47bf95", "266cc0e6d8585aeef6022823c88225b7", 
     "37a04ae46c70adb1ccb0a7e253a0a4db", "c7d348ed5c224054038566b39c17873f", "6eb37c469da9a6d364e541e4ccd6199e", 
@@ -27,9 +33,10 @@
     
     # if you don't already have fertile, install it
     if (!"fertile" %in% rownames(utils::installed.packages())) {
-      suppressMessages(
+      suppressMessages({
+        remotes::install_github("hadley/requirements", dependencies = TRUE) 
         remotes::install_github("baumer-lab/fertile", dependencies = TRUE)
-      )
+      })
     }
     
     # library(tidyverse)
