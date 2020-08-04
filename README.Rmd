@@ -26,20 +26,11 @@ The goal of sds192 is to help introductory data science students.
 You can install the development version from [GitHub](https://github.com/) with:
 
 ```{r, eval=FALSE}
-# install.packages("devtools")
-devtools::install_github("benmarwick/wordcountaddin")
-devtools::install_github("hadley/requirements")
-devtools::install_github("baumer-lab/sds192")
-```
-## Usage
-
-Make sure to load `sds192` *after* you load the `tidyverse`:
-
-```{r example, message=FALSE}
-library(tidyverse)
-library(sds192)
+# install.packages("remotes")
+remotes::install_github("baumer-lab/sds192")
 ```
 
 ## Use template
 
+To use the built-in R Markdown template for assignments:
 Go to **File -> New File -> R Markdown -> From Template -> SDS 192 assignment**
