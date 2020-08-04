@@ -1,3 +1,5 @@
-# @export
-# @importFrom wordcountaddin text_stats
-# wordcountaddin::text_stats
+#' @export
+
+text_stats <- function(){
+wordcountaddin::text_stats
+}
