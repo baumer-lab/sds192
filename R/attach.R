@@ -3,12 +3,23 @@
 # Groups will be assigned later, so these are blank for now.
 
 .onAttach <- function(libname, pkgname) {
-  
-  if (!"wordcountaddin" %in% rownames(utils::installed.packages())) {
-    suppressMessages(
-      remotes::install_github("benmarwick/wordcountaddin", dependencies = TRUE)
-    )
+
+  if (is_experimental()) {
+    
+    # if you don't already have fertile, install it
+    if (!"fertile" %in% rownames(utils::installed.packages())) {
+      suppressMessages({
+        remotes::install_github("hadley/requirements", dependencies = TRUE) 
+        remotes::install_github("baumer-lab/fertile", dependencies = TRUE)
+      })
+    }
+    
+    # library(tidyverse)
+    suppressMessages(library(fertile))
   }
+}
+
+is_experimental <- function(username = Sys.getenv("LOGNAME")) {
   
   fertile_group <- c(
     "a534f2dfa754d5638a09fec07c6d6964", "989299a7f94a18b5700561c69f47bf95", "266cc0e6d8585aeef6022823c88225b7", 
@@ -26,22 +37,6 @@
     "91bdca1084604b301cc11227d2d9721d", "23350f7edc849fcfe56d4967279bac79", "a736dce875a933eee4d4da2229c63e14",
     "23cf192efafb223c654e65c87fe7019a"
   )
-    
-  username <- Sys.getenv("LOGNAME")
-
-  if (digest::digest(username, algo = "md5") %in% fertile_group) {
-    
-    # if you don't already have fertile, install it
-    if (!"fertile" %in% rownames(utils::installed.packages())) {
-      suppressMessages({
-        remotes::install_github("hadley/requirements", dependencies = TRUE) 
-        remotes::install_github("baumer-lab/fertile", dependencies = TRUE)
-      })
-    }
-    
-    # library(tidyverse)
-    suppressMessages(library(fertile))
-  }
+  
+  digest::digest(username, algo = "md5") %in% fertile_group
 }
-  
-  
