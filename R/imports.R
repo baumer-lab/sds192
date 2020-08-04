@@ -1,3 +1,3 @@
-#' @export
-#' @importFrom wordcountaddin text_stats
-wordcountaddin::text_stats
+# @export
+# @importFrom wordcountaddin text_stats
+# wordcountaddin::text_stats

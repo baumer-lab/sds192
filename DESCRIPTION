@@ -10,12 +10,12 @@ Authors@R: c(
 Description: Provides data sets and templates for introductory data science.
 License: GPL-3
 Suggests:
-    fertile
-Imports:
-    devtools,
-    digest,
-    remotes,
+    fertile,
     wordcountaddin
+Imports:
+    digest,
+    remotes
+    
 Remotes: baumer-lab/fertile, benmarwick/wordcountaddin
 Encoding: UTF-8
 LazyData: true
