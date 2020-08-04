@@ -8,7 +8,11 @@ text_stats <- function() {
     )
   }
   if (requireNamespace("wordcountaddin")) {
-    wordcountaddin::text_stats()
+    if (is_experimental()) {
+      gsub("koRpus", "Korpus", wordcountaddin::text_stats())
+    } else {
+      wordcountaddin::text_stats()
+    }
   } else {
     warning("Unable to load wordcountaddin")
   }
