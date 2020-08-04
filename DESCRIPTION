@@ -4,7 +4,8 @@ Version: 0.0.0.9003
 Authors@R: c(
     person(given = "Benjamin S.", family = "Baumer",
            role = c("aut", "cre"),
-           email = "ben.baumer@gmail.com"),
+           email = "ben.baumer@gmail.com",
+           comment = c(ORCID = "0000-0002-3279-0516")),
     person("Audrey", "Bertin", role = c("aut"))
            )
 Description: Provides data sets and templates for introductory data science.
