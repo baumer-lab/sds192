@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/baumer-lab/sds192.svg?branch=master)](https://travis-ci.org/baumer-lab/sds192)
 <!-- badges: end -->
 
-The goal of sds192 is to help introductory data science students. 
+The goal of **sds192** is to help introductory data science students. 
 
 ## Installation
 
@@ -27,6 +27,8 @@ You can install the development version from [GitHub](https://github.com/) with:
 
 ```{r, eval=FALSE}
 # install.packages("remotes")
+remotes::install_github("benmarwick/wordcountaddin")
+remotes::install_github("baumer-lab/fertile")
 remotes::install_github("baumer-lab/sds192")
 ```
 

@@ -5,14 +5,6 @@
 .onAttach <- function(libname, pkgname) {
 
   if (is_experimental()) {
-    
-    # if you don't already have fertile, install it
-    if (!"fertile" %in% rownames(utils::installed.packages())) {
-      suppressMessages({
-        remotes::install_github("baumer-lab/fertile", dependencies = TRUE)
-      })
-    }
-    
     # library(tidyverse)
     suppressMessages(library(fertile))
   }
