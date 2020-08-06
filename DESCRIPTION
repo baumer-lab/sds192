@@ -1,6 +1,6 @@
 Package: sds192
 Title: Introduction to Data Science
-Version: 0.0.0.9004
+Version: 0.0.0.9005
 Authors@R: c(
     person(given = "Benjamin S.", family = "Baumer",
            role = c("aut", "cre"),
@@ -11,6 +11,7 @@ Authors@R: c(
 Description: Provides data sets and templates for introductory data science.
 License: GPL-3
 Imports:
+    bsplus,
     digest,
     fertile,
     wordcountaddin

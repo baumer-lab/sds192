@@ -11,6 +11,7 @@ output:
     fig_width: 7
     fig_height: 6
     fig_caption: true
+    theme: lumen
     df_print: paged
 ---
 
@@ -37,6 +38,16 @@ mtcars
 ## Word count
 
 ```{r word_count, message=FALSE, echo=FALSE}
-sds192::text_stats()
+text_stats()
 ```
+
+## Standards
+
+In this assignment, we are attempting the following standards:
+
+```{r buttons, echo=FALSE}
+standard_button("markdown")
+standard_button("aesthetics")
+```
+
 
