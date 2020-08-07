@@ -9,7 +9,7 @@ standard_button(x, ...)
 \arguments{
 \item{x}{text of the standard}
 
-\item{...}{arguments passed to \code{\link[bsplus]{bs_button}}}
+\item{...}{arguments passed to \code{\link{button}}}
 }
 \description{
 Standard Buttons
