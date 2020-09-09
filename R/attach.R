@@ -10,7 +10,7 @@
   }
 }
 
-is_experimental <- function(username = Sys.getenv("LOGNAME")) {
+is_experimental <- function(){
   
   fertile_group <- c(
     "a534f2dfa754d5638a09fec07c6d6964", "989299a7f94a18b5700561c69f47bf95", "266cc0e6d8585aeef6022823c88225b7", 
@@ -29,5 +29,15 @@ is_experimental <- function(username = Sys.getenv("LOGNAME")) {
     "23cf192efafb223c654e65c87fe7019a"
   )
   
-  digest::digest(username, algo = "md5") %in% fertile_group
+  logname = Sys.getenv("LOGNAME")
+  username = Sys.getenv("USERNAME")
+  
+  if(username == ""){
+    identifier = logname
+  }else{
+    identifier = username
+  }
+  
+  digest::digest(identifier, algo = "md5") %in% fertile_group
+  
 }
