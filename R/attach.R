@@ -10,7 +10,7 @@
   }
 }
 
-is_experimental <- function(){
+is_experimental <- function(logname = whoami::username()) {
   
   fertile_group <- c(
     "f7b0a9d5117b88cecec122f8ba0e52fb", "4d0295a810fb8491f91f914771572485", "36211a1f19f82ae07aed990b671c9b20", "b5d2b72b4f36f3afdce32a8409dc6ea0",
@@ -25,15 +25,6 @@ is_experimental <- function(){
     "2dbac7345a71a13c434af882853e86bd", "3c5df10c572b5627418c034f65f52dee", "0ff07a4f6faaf3df57b348dad7bd22c9"
   )
   
-  logname = Sys.getenv("LOGNAME")
-  username = Sys.getenv("USERNAME")
-  
-  if(username == ""){
-    identifier = logname
-  }else{
-    identifier = username
-  }
-  
-  digest::digest(identifier, algo = "md5") %in% fertile_group
+  digest::digest(logname, algo = "md5") %in% fertile_group
   
 }

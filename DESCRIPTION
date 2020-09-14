@@ -1,6 +1,6 @@
 Package: sds192
 Title: Introduction to Data Science
-Version: 0.0.0.9008
+Version: 0.0.0.9009
 Authors@R: c(
     person(given = "Benjamin S.", family = "Baumer",
            role = c("aut", "cre"),
@@ -12,7 +12,10 @@ Description: Provides data sets and templates for introductory data science.
 License: GPL-3
 Imports:
     digest,
+    dplyr,
     fertile,
+    htmltools,
+    whoami,
     wordcountaddin
 Remotes: benmarwick/wordcountaddin, baumer-lab/fertile
 Encoding: UTF-8
