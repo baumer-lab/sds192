@@ -1,6 +1,6 @@
 Package: sds192
 Title: Introduction to Data Science
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
     person(given = "Benjamin S.", family = "Baumer",
            role = c("aut", "cre"),
@@ -15,6 +15,7 @@ Imports:
     dplyr,
     fertile,
     htmltools,
+    RMySQL,
     whoami,
     wordcountaddin
 Remotes: benmarwick/wordcountaddin, baumer-lab/fertile
