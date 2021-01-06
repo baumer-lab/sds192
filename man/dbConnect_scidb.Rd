@@ -9,7 +9,7 @@ dbConnect_scidb(dbname, ...)
 \arguments{
 \item{dbname}{the name of the database to which you want to connect}
 
-\item{...}{arguments passed to \code{\link[RMySQL]{dbConnect}}}
+\item{...}{arguments passed to \code{\link[DBI]{dbConnect}}}
 }
 \value{
 A \code{\link[RMySQL]{MySQLConnection-class}} object
@@ -29,7 +29,7 @@ if (require(RMySQL)) {
   if (require(dplyr)) {
     tbl(db_air, "airports")
   }
-  dbDisconnect(db)
+  dbDisconnect(db_air)
 }
 }
 \seealso{
