@@ -44,11 +44,9 @@ text_stats()
 
 ## Standards
 
-In this assignment, we are attempting the following standards:
+In this assignment, we attempted the following [standards](https://beanumber.github.io/sds192/standards.html):
 
-```{r buttons, echo=FALSE}
-standard_button("markdown")
-standard_button("aesthetics")
-```
+- `r standard_button("markdown")`: We met the Markdown standard because we...
+- `r standard_button("aesthetics")`: We met the Aesthetics standard because we...
 
 

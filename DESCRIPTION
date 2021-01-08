@@ -1,6 +1,6 @@
 Package: sds192
 Title: Introduction to Data Science
-Version: 0.0.3
+Version: 0.0.3.9000
 Authors@R: c(
     person(given = "Benjamin S.", family = "Baumer",
            role = c("aut", "cre"),
