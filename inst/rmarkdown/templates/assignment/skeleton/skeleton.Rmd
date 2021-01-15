@@ -1,7 +1,11 @@
 ---
 title: "SDS 192 Assignment"
 subtitle: "SDS 192"
-author: "Your name"
+author: 
+- name: Author One
+  affiliation: Smith College
+- name: Author Two
+  affiliation: Smith College
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
 output: 
   html_document:
